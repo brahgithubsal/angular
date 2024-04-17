@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sidebar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+      overflow-y: auto;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      background-color: #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sidebar-header h3 {
+      margin: 0;
+    }
+
+    .sidebar-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .sidebar-links {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .sidebar-links li {
+      padding: 10px 20px;
+    }
+
+    .sidebar-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar-links li a:hover {
+      color: #ccc;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .content table th,
+    .content table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .content table th {
+      background-color: #f2f2f2;
+    }
+
+    .content table tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .content table td:last-child {
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .accept-button,
+    .reject-button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .reject-button {
+      background-color: #f44336;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+
+      .dropdown {
+        position: static;
+        margin-top: 20px;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Sidebar</h3>
+      <button class="sidebar-toggle" id="sidebar-toggle">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="/homeservice">Home</a></li>
+      <li><a href="service">Add Service</a></li>
+      <li><a href="CommandUser">List Command</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>liste command</h1>
+    <table *ngIf="userCommands && userCommands.length > 0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Client Name</th>
+          <th>Service Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let command of userCommands">
+          <td>{{ command.id }}</td>
+          <td>{{ command.client.name }}</td>
+          <td>{{ command.service.categorie }}</td>
+          <td></td>
+          <td class="button-container">
+            <button class="accept-button">Accept</button>
+            <button class="reject-button" >Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div *ngIf="!userCommands || userCommands.length === 0">
+      No commands found.
+    </div>
+  </div>
+</body>
+</html>
