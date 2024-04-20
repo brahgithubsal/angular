@@ -1,0 +1,372 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" id="theme" class="light">
+
+
+
+
+<body>
+   
+
+    
+    <a href="javascript:void(0)" class="back-to-top"><i class="fa-solid fa-up-long"></i></a>
+    <!-- Back-to-top End -->
+    <!-- Header Start !-->
+    <div class="navbar-top border-bottom py-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="d-flex gap-2">
+                        <div class="country">
+                            <select name="country" class="form-control" id="country">
+                                <option value="UK">
+                                    EN
+                                </option>
+                                <option value="US">
+                                    ES
+                                </option>
+                                <option value="RS">
+                                    RS
+                                </option>
+                            </select>
+                        </div>
+                        <div class="currency">
+                            <select name="currency" class="form-control" id="currency">
+                                <option value="USD">
+                                    USD
+                                </option>
+                                <option value="EUR">
+                                    EUR
+                                </option>
+                                <option value="INR">
+                                    INR
+                                </option>
+                            </select>
+                        </div>
+                        <div class="d-none align-items-center gap-1 nav-top-left">
+                            <i class="fa-solid fa-envelope text-dark"></i>
+                            <p class="fs-14 text-dark text-truncate">support@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="toggle-theme">
+                        <input type="checkbox" class="changeTheme" id="changeTheme1">
+                        <label for="changeTheme1" class="m-auto"></label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex gap-2 nav-btn-group align-items-center justify-content-end">
+                        <a href="browse-bid.html" class="bg-transparent text-dark border-0 px-1">
+                            <i class="fa-solid fa-search"></i>
+                        </a>
+                        <a href="login.html" class="bg-transparent text-dark border-0 px-1">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <button class="bg-transparent text-dark border-0"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="bg-white">
+      <nav class="navbar navbar-expand-lg py-3">
+          <div class="container">
+              <a class="navbar-brand p-0" href="index.html">
+                  <img src="assets/images/logo.svg" id="headerLogo" class="themeLogo img-fluid w-100" alt="logo">
+              </a>
+           
+  
+  
+              
+              <div class="d-flex gap-1 nav-btn-group align-items-center">
+                  <!-- <a href="registerclient" class="primary-btn">
+                      Get Started
+                  </a> -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="nav-right" data-bs-target="#navbar"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="toggle-menu-icon"><span></span><span></span><span></span><span></span></span>
+                  </button>
+              </div>
+          </div>
+      </nav>
+  </header>
+    <!-- Header End !-->
+    <!-- Main Content Start !-->
+   
+        <div class="inner-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 pe-lg-0 position-relative">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3 mt-3 mb-4">
+                                <img src="assets/images/avatar-5.png" class="dashboard-avatar" alt="avatar">
+                                <div>
+                                    <h5>Rozzy Nomad</h5>
+                                    <p>system@mail.com</p>
+                                </div>
+                            </div>
+
+                            <button class="primary-btn dashboard-toggler d-block d-lg-none" id="sidebarMenuOpen">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="dashboard-sidebar">
+                            <div class="sidebar-menu">
+                                <ul>
+                                    <li class="active">
+                                        <a href="homeservice">
+                                            <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service">
+                                            <i class="fa-solid fa-user"></i> <span>Service</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CommandUser">
+                                            <i class="fa-solid fa-gavel"></i> <span>Commmands</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 ps-md-0">
+                        <div class="dashboard-data">
+                            <div class="row g-3 mb-3 mb-md-5">
+                                <div class="col-md-4">
+                                    <div class="card-wrapper">
+                                        <div class="d-flex gap-4">
+                                            <i class="fa-solid fa-gavel text-orange"></i>
+                                            <div>
+                                                <h3 class="fw-bold">80</h3>
+                                                <p>Active Bids</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-wrapper">
+                                        <div class="d-flex gap-4">
+                                            <i class="fa-solid fa-trophy text-orange"></i>
+                                            <div>
+                                                <h3 class="fw-bold">15</h3>
+                                                <p>Item Won</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-wrapper">
+                                        <div class="d-flex gap-4">
+                                            <i class="fa-solid fa-star text-orange"></i>
+                                            <div>
+                                                <h3 class="fw-bold">124</h3>
+                                                <p>Favorite</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="bidding-detail-wrapper">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                       
+                                       
+                                       
+                                    </ul>
+                                    <div class="tab-content dashboard-bidding" id="productDetailTab">
+                                        <div >
+                                            <div class="bidding-history">
+                                                <div class="table-responsive">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Service</th>
+                                                                    <th>Categorie</th>
+                                                                    <th>Prix</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody *ngFor="let service of services">
+                                                                <tr>
+                                                                  <img [src]="service.imageUrl" width="100px" height:10px>
+                                                                    <td>
+                                                                      <p class="card-title" *ngIf="editService !== service">{{ service.categorie }}</p>
+                                                                      <input *ngIf="editService === service" [(ngModel)]="service.categorie" class="card-title">
+                                                                                                                                          </td>
+                                                                    <td class="card-text" *ngIf="editService !== service"> {{ service.prix }}$
+                                                                      <input *ngIf="editService === service" [(ngModel)]="service.prix" class="card-text"></td>
+                                                                    <td>
+                                                                      <div *ngIf="editService !== service">
+                                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                                          <a (click)="editService = service" class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit">Edit</a>
+                                                                          <button type="button" class="btn btn-danger" (click)="onDeleteService(service.id)">Delete</button>
+                                                                        </div>
+                                                                      </div>                                                                    </td>
+                                                                </tr>
+                                                               
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Main Content End !-->
+    <!-- Footer Start !-->
+    <footer>
+        <div class="footer-top bg-dark inner-gap">
+            <div class="container">
+                <div class="row gy-4 gy-lg-3">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="footer-disc">
+                            <a href="index.html" class="footer-logo">
+                                <img src="assets/images/logo-white.svg" id="footerLogo" class="fThemeLogo img-fluid"
+                                    alt="logo">
+                            </a>
+                            <p>Unlock treasures through exhilarating auctions. Your gateway to rare finds and
+                                captivating experiences awaits.</p>
+                            <a href="mailto:info@bidzone.com" class="h4 fw-normal text-white">info@bidzone.com</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Sitemap</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="javascript:void(0)">Support</a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">FAQS</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Categories</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="browse-bid.html">Music</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">jewellery</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">Real Estate</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">vehicle</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">Clothes</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">sports</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Navigation</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="signup.html">my account</a>
+                                </li>
+                                <li>
+                                    <a href="bid-history.html">Bid History</a>
+                                </li>
+                                <li>
+                                    <a href="checkout.html">checkout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Legal</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="cookies-policy.html">Cookies Policy</a>
+                                </li>
+                                <li>
+                                    <a href="term-condition.html">Terms Of Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 my-lg-5 border-white">
+                <div
+                    class="d-flex flex-wrap gap-4 justify-content-center justify-content-xl-between align-items-center">
+                    <ul class="footer-social-links">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="bid-number">
+                        <h2><span>1,50,000</span> Bids</h2>
+                        <h2><span>10,376</span> Members</h2>
+                        <h2><span>8942</span> Feedbacks</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-2 py-md-4 bg-light">
+            <p class="text-dark text-center">©
+                <script>document.write(new Date().getFullYear());</script> BidZone - All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+   
+
+
+
+

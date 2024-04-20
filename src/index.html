@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Auction</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+</head>
+<body>
+    
+  <app-root></app-root>
+
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<!-- JavaScript Libraries -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    var swiper = new Swiper(".product-swiper", {
+        spaceBetween: 32,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            450: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1400: {
+                slidesPerView: 4,
+            },
+        }
+    });
+    // price Range
+    var lowerSlider = document.querySelector('#lower');
+    var upperSlider = document.querySelector('#upper');
+
+    document.querySelector('#two').value = upperSlider.value;
+    document.querySelector('#one').value = lowerSlider.value;
+
+    var lowerVal = parseInt(lowerSlider.value);
+    var upperVal = parseInt(upperSlider.value);
+
+    upperSlider.oninput = function () {
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+
+        if (upperVal < lowerVal + 4) {
+            lowerSlider.value = upperVal - 4;
+            if (lowerVal == lowerSlider.min) {
+                upperSlider.value = 4;
+            }
+                 upperSlider.value = lowerVal + 4;
+            if (upperVal == upperSlider.max) {
+                lowerSlider.value = parseInt(upperSlider.max) - 4;
+            }
+        }
+        document.querySelector('#one').value = this.value
+    };
+</script> 
+
+</body>
+
+</html>

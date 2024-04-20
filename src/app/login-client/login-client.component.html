@@ -1,0 +1,52 @@
+
+
+
+
+
+  
+  <div class="login-wrapper" id="login-wrapper" style="background-image: url('assets/images/login-bg.svg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="form-wrapper text-center">
+                    <a class="d-inline-block mb-2" href="index.html">
+                        <img src="assets/images/auction-fevicon.png" class="themeLogo img-fluid" alt="logo">
+                    </a>
+                    <h2 class="display-6 fw-bold mb-3">Log In</h2>
+                    <p class="mb-4">Add your credentials below to login</p>
+  
+                    <div class="form-container">
+                        <h2>Login</h2>
+                        <form (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <label>Email*</label>
+                                <input type="email" class="form-control" placeholder="name@mail.com"   id="email" name="email" [(ngModel)]="email" required>>
+                            </div>
+                            <div class="form-group">
+                                <label>Password*</label>
+                                <input type="password" class="form-control" placeholder="****"id="password" name="password" [(ngModel)]="password" required>>
+                            </div>
+                            <button type="submit" class="primary-btn w-100">Login</button>
+                            <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+                        </form>
+                    </div>
+  
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="border-bottom border-dark mb-4" style="height: 1px;">
+                                <span class="position-relative px-2 text-dark" style="top: -13px; background: var(--bg-wrapper)">OR</span>
+                            </p>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <button class="primary-btn bg-light text-black border-dark w-100 text-capitalize">
+                                <i class="fa-brands fa-google"></i><span class="ms-2">Continue with google</span>
+                            </button>
+                        </div>
+                        <p>Don't have an account? <a href="registerclient">Create an account</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
