@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment    
+metadata:             
+  name: angular-deployment
+  namespace: web
+spec:               
+  selector:         
+    matchLabels:
+      app: angular-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: angular-deployment
+    spec:
+      containers:
+        - name: angular-deployment
+          image: azizbk9/angular-image:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-service
+  namespace: web
+  labels:
+    name: angular-deployment
+spec:
+  ports:
+    - nodePort: 30177 # make the service available to network requests from external clients
+      port: 80        # access the service via external port no
+      targetPort: 80  # port number that container listening on
+      protocol: TCP   
+  selector:           
+    app: angular-deployment
+  type: NodePort
