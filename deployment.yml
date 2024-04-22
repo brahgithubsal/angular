@@ -15,8 +15,11 @@ spec:
     spec:
       containers:
         - name: angular-deployment
+          env:
+          - name: API_URL
+            value: http://192.168.49.2:30762
           image: azizbk9/angular-image:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
