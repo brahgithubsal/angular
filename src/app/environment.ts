@@ -1,6 +1,6 @@
 export const environment ={
     production: false,
-    apiBaseUrl: $API_URL,
+    apiBaseUrl: env.API_URL,
    
 }
 
