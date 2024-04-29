@@ -3,10 +3,7 @@ import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { CookieService } from 'ngx-cookie';
 import { environment } from 'src/environments/environment';
-import { environment } from '../environments/environment';
 
-// Use it like this
-console.log(environment.apiBaseUrl);
 
 @Injectable({
   providedIn: 'root'
