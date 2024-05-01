@@ -1,6 +1,6 @@
 export const environment ={
     production: false,
-    apiBaseUrl: 'http://spring-boot-service:8080',
+    apiBaseUrl: 'http://localhost:8080',
    
 }
 
